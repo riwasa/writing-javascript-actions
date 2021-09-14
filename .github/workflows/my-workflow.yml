@@ -1,4 +1,4 @@
-name: 35 Actions
+name: JS Actions
 
 on: [push]
 
