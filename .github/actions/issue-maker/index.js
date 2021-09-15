@@ -17,7 +17,7 @@ async function run() {
       console.log("octokit.issues is null");
     }
 
-    const newIssue = await octokit.issues.create({
+    const newIssue = await octokit.rest.issues.create({
       repo: github.context.repo.repo,
       owner: github.context.repo.owner,
       title: issueTitle,
