@@ -9,6 +9,14 @@ async function run() {
 
     const octokit = new github.getOctokit(token);
 
+    if (octokit == null) {
+      console.log("octokit is null");
+    }
+
+    if (octokit.issues == null) {
+      console.log("octokit.issues is null");
+    }
+
     const newIssue = await octokit.issues.create({
       repo: github.context.repo.repo,
       owner: github.context.repo.owner,
